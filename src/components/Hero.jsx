@@ -9,27 +9,39 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-center justify-between gap-5`}
       >
-        <div className='flex flex-col justify-center items-center mt-28 md:mt-5 lg:5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+        {/* Left side - Text content */}
+        <div className='flex flex-row items-start gap-5 flex-1 z-10'>
+          <div className='flex flex-col justify-center items-center mt-5'>
+            <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
+            <div className='w-1 sm:h-80 h-40 violet-gradient' />
+          </div>
+
+          <div className="mt-5">
+            <h1 className={`${styles.heroHeadText} text-white`}>
+              Hi, I'm <span className='text-[#915EFF]'>Joshua</span>
+            </h1>
+            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+              I build clean UIs and ship <br className='sm:block hidden'/>
+              fast with product thinking
+            </p>
+            <p className='mt-4 text-secondary text-[16px] max-w-2xl'>
+              <span className='text-[#915EFF] font-medium'>Now:</span> Building dytor.app — productivity timer for focused work
+            </p>
+          </div>
         </div>
 
-        <div className="mt-28 md:mt-5 lg:5">
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Huzaif</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop modern, user <br/>
-            interfaces and web applications
-          </p>
+        {/* Right side - 3D Canvas */}
+        <div className='hidden lg:flex flex-1 h-full items-center justify-end'>
+          <ComputersCanvas />
         </div>
       </div>
 
-      <ComputersCanvas />
-
-      
+      {/* Mobile 3D Canvas - Full width on smaller screens */}
+      <div className='lg:hidden absolute inset-0 top-[120px]'>
+        <ComputersCanvas />
+      </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

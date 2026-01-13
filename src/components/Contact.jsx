@@ -37,9 +37,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Huzaif Ahmed",
+          to_name: "Joshua Nnadi",
           from_email: form.email,
-          to_email: "dev.huzaif@gmail.com",
+          to_email: "contact@joshuannadi.dev",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -116,7 +116,7 @@ const Contact = () => {
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-[#915EFF] transition-all duration-300 hover:scale-105'
           >
             {loading ? "Sending..." : "Send"}
           </button>

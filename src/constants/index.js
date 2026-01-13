@@ -12,6 +12,7 @@ import {
   gearXpert,
   project2,
   project3,
+  dytorScreenshot,
   mysql,
   express,
   aws,
@@ -35,8 +36,8 @@ import {
 } from '../assets'
 
 
-// Import Tekisky separately
-import tekisky from "../assets/company/tekisky.png";
+// Import Joshua's logo
+import tekisky from "../assets/logo-joshua.jpg";
 
 
 export const navLinks = [
@@ -52,6 +53,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "business",
+    title: "Solutions",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -59,20 +64,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Full-Stack Developer",
-    icon: web,
-  },
-  {
     title: "Frontend Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Product Thinker",
+    icon: creator,
   },
   {
-    title: "Ui UX Designer",
-    icon: creator,
+    title: "Full-Stack Developer",
+    icon: web,
+  },
+  {
+    title: "Fast Shipper",
+    icon: backend,
   },
 ];
 
@@ -94,76 +99,77 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "gsap",
-    icon: gsap,
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
   {
-    name: "framer",
+    name: "Framer Motion",
     icon: framer,
   },
-
- 
+  {
+    name: "GSAP",
+    icon: gsap,
+  },
   {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Material Ui",
-    icon: mui,
   },
   {
     name: "Node JS",
     icon: nodejs,
   },
   {
-    name: "Express Js",
-    icon: express,
-  },
-  {
-    name: "AWS",
-    icon: aws,
+    name: "Git",
+    icon: git,
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "MySql",
-    icon: mysql,
-  },
-
-  {
-    name: "git",
-    icon: git,
-  },
- 
-
 ];
 
 const experiences = [
   {
-    title: "Full-Stack Developer",
-    company_name: "Tekisky",
+    title: "Frontend Developer · Hackathon Winner",
+    company_name: "Enugu Tech Festival",
+    icon: tekisky,
+    iconBg: "#915EFF",
+    date: "March 2025",
+    points: [
+      "🏆 Won Enugu Tech Festival hackathon for innovative frontend solution",
+      "Built mobile-first UI with modern design principles and smooth animations",
+      "Collaborated with cross-functional team to ship functional MVP under time pressure",
+      "Demonstrated product thinking and rapid prototyping skills",
+    ],
+  },
+  {
+    title: "Frontend Developer · Hackathon Winner",
+    company_name: "Innovate to Impact",
+    icon: tekisky,
+    iconBg: "#E6DEDD",
+    date: "November 2024",
+    points: [
+      "🏆 Won 'Innovate to Impact' hackathon with creative frontend development",
+      "Designed and implemented clean, user-friendly interfaces",
+      "Shipped polished product under tight deadline with focus on UX",
+      "Worked closely with team to deliver impactful solution",
+    ],
+  },
+  {
+    title: "Software Engineering Student",
+    company_name: "Peaceland University Enugu",
     icon: tekisky,
     iconBg: "#383E56",
-    date: "Jan 2023 - present",
+    date: "2023 - 2027",
     points: [
-      "Developing and maintaining web applications using MERN technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Studying Software Engineering with focus on modern web development",
+      "Completed online courses from Harvard University",
+      "Building real-world projects while learning fundamentals",
+      "Active in developer community and hackathons",
     ],
   },
 ];
@@ -171,72 +177,67 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Huzaif proved me wrong.",
-    name: "MD Mustaqeem",
-    designation: "Ecommerce",
-    company: "QuickMart",
+      "Joshua's frontend work is exceptional. He ships fast, thinks product-first, and delivers clean, modern UIs that users love.",
+    name: "Tech Festival",
+    designation: "Hackathon Judge",
+    company: "Enugu Tech Festival",
     image: firstTestimonial,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Huzaif does.",
-    name: "Abdul Raheman",
-    designation: "Ecommerce Business",
-    company: "justbuyz",
+      "Impressive speed and quality. Joshua built our event platform with a beautiful mobile-first UI and smooth interactions.",
+    name: "Event Organizer",
+    designation: "Product Lead",
+    company: "Live Events Co",
     image: secondTestimonial,
   },
   {
     testimonial:
-      "After Huzaif optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "James Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "His ability to combine design thinking with fast execution is rare. Joshua doesn't just code, he builds products people want to use.",
+    name: "Innovation Team",
+    designation: "Hackathon Judge",
+    company: "Innovate to Impact",
     image: thirdTestimonial,
   },
 ];
 
 const projects = [
   {
-    name: "Tekisky Mart",
+    name: "Dytor.app",
     description:
-      "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.",
+      "Smart timer and productivity tool for focused work sessions. Clean interface, customizable timers, task tracking, and analytics. Built to help you ship faster and stay in flow without distractions.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "productivity",
+        color: "green-text-gradient",
+      },
+      {
+        name: "next.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dytorScreenshot,
+    source_code_link: "https://dytor.app",
+  },
+  {
+    name: "Evena",
+    description:
+      "Event hosting + ticketing + community platform. Mobile-first liquid glass UI combining Telegram, YouTube, and Luma vibes. Modern event experience with clean design and smooth interactions.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "next.js",
         color: "white-text-gradient",
       },
       {
-        name: "node",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
- 
-    ],
-    image: project2,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "GearXpert",
-    description:
-      "GearXpert is your ultimate destination for premium auto parts and accessories, Whether you're an automobile enthusiast or a professional, find everything you need to upgrade, repair.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "emailJs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Gsap",
+        name: "glassmorphism",
         color: "pink-text-gradient",
       },
     ],
@@ -244,25 +245,21 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "GoGroove-Ecommerce",
+    name: "TwitFlow",
     description:
-      "Go-Groove is your ultimate destination for premium products across various categories. Whether you're a savvy shopper or a professional, enhance, and simplify your lifestyle—all in one place!",
+      "AI-powered tweet scheduling assistant built for Web3 developers and creators. Smart scheduling, content optimization, and analytics. Helping creators maintain consistent presence without the grind.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "express",
-        color: "white-text-gradient",
-      },
-      {
-        name: "node",
+        name: "AI",
         color: "green-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "web3",
+        color: "pink-text-gradient",
       },
     ],
     image: project3,

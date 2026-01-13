@@ -23,6 +23,24 @@
   display: block;
 }
 
+/* Liquid Glass Navbar */
+.navbar-glass {
+  background: rgba(11, 7, 20, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Menu Glass Effect */
+.mobile-menu-glass {
+  background: rgba(11, 7, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -114,6 +132,22 @@
     #ec008c,
     #fc6767
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.white-text-gradient {
+  background: #ffffff;
+  background: -webkit-linear-gradient(
+    to top,
+    #e0e0e0,
+    #ffffff
+  );
+  background: linear-gradient(
+    to top,
+    #e0e0e0,
+    #ffffff
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

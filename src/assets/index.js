@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import logo from "./logo-joshua.jpg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -12,7 +12,8 @@ import css from "./tech/css.png";
 import figma from "./tech/figma.png";
 import gearXpert from './gearXpert.png';
 import project3 from './project3.webp';
-import project2 from './proj1.webp'
+import project2 from './proj1.webp';
+import dytorScreenshot from './dytor-screenshot.png'
 import mysql from './tech/mysql.png';
 import express from './tech/express.png';
 import aws from './tech/aws.png';
@@ -43,6 +44,7 @@ export {
   gearXpert,
   project2,
   project3,
+  dytorScreenshot,
   mysql,
   express,
   aws,
